@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2>Checkout</h2>
+    <div class="checkout-items">
+        {% if cart_items %}
+            <ul>
+                {% for item in cart_items %}
+                    <li>
+                        <img src="{{ item.image }}" alt="{{ item.title }}" style="width: 50px; height: 50px; object-fit: contain; vertical-align: middle;">
+                        {{ item.title }} - ${{ item.price }}
+                        <a href="{{ url_for('remove_from_cart', product_id=item.id) }}" class="delete-btn">Delete</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <p><strong>Total:</strong> ${{ "%.2f"|format(total) }}</p>
+            <a href="{{ url_for('clear_cart') }}" id="complete-purchase" class="complete-btn">Complete Purchase (Clear Cart)</a>
+        {% else %}
+            <p>Your cart is empty.</p>
+        {% endif %}
+        <a href="{{ url_for('index') }}" class="back-home-btn">Back to Home</a>
+    </div>
+
+    <script>
+        document.getElementById('complete-purchase').addEventListener('click', function(event) {
+            event.preventDefault();
+            if (confirm('Are you sure you want to complete this purchase? This will clear your cart.')) {
+                window.location.href = this.href;
+            }
+        });
+    </script>
+{% endblock %}

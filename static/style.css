@@ -1,0 +1,214 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f6f5;
+    color: #333;
+}
+
+header {
+    background-color: #B17F59;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    color: white;
+    font-size: 24px;
+}
+
+header img.logo {
+    height: 50px; /* Ukuran logo */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #e0e0e0;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #B17F59;
+    margin-bottom: 20px;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.product:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    max-width: 100%;
+    height: 150px;
+    object-fit: contain;
+}
+
+.product h3 {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.product p {
+    color: #333333;
+    font-weight: normal;
+    margin: 5px 0;
+}
+
+.product a {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 15px;
+    background-color: #B17F59;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.product a:hover {
+    background-color: #6a482e;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+form input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #B17F59;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #6a482e;
+}
+
+.checkout-items {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-items ul {
+    list-style: none;
+    padding: 0;
+}
+
+.checkout-items li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.checkout-items p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #B17F59;
+}
+
+.delete-btn {
+    display: inline-block;
+    padding: 8px 8px;
+    background-color: #ff4444;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.delete-btn:hover {
+    background-color: #cc3333;
+}
+
+/* Tambahkan di akhir file style.css */
+.complete-btn {
+    display: inline-block;
+    padding: 8px 8px;
+    background-color: #03AC0E;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.complete-btn:hover {
+    background-color: #028a0a;
+}
+
+/* Tambahkan atau perbarui di akhir file style.css */
+.checkout-items {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative; /* Agar tombol bisa diposisikan relatif terhadap kontainer ini */
+}
+
+.complete-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #03AC0E;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.complete-btn:hover {
+    background-color: #028a0a;
+}
+
+.back-home-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #acac03;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.back-home-btn:hover {
+    background-color: #7c8a02;
+}

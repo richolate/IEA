@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2>Search Products</h2>
+    <form method="POST">
+        <input type="text" name="query" placeholder="Search for products..." required>
+        <button type="submit">Search</button>
+    </form>
+    {% if products %}
+        <h3>Results for "{{ query }}"</h3>
+        <div class="product-list">
+            {% for product in products %}
+                <div class="product">
+                    <img src="{{ product.image }}" alt="{{ product.title }}">
+                    <h3>{{ product.title }}</h3>
+                    <p>${{ product.price }}</p>
+                    <a href="{{ url_for('product_detail', product_id=product.id) }}">Detail</a>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endblock %}
